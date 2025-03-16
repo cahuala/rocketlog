@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import { prisma } from "@/database/prisma"
 import { z } from 'zod'
 
-class DeliveriesContoller{
+class DeliveriesController{
     async create(request: Request, response: Response ){
         const bodySchema = z.object({
             user_id:z.string().uuid(),
@@ -29,4 +29,4 @@ class DeliveriesContoller{
     }
 }
 
-export { DeliveriesContoller }
+export { DeliveriesController }
